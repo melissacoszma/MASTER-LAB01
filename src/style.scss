@@ -15,6 +15,10 @@
     $quinary-colorA: #B1CC28;
     $senary-colorA: #395511;
 
+    $base_color1: $cuaternary-colorA;
+    $base_color2: $quinary-colorA;
+    $base_color3: #4570ba;
+
 
     $font-sono: "Sono", monospace;
 
@@ -23,17 +27,20 @@
 @mixin gradient1-style {
   display: flex;
   flex-direction: row;
-  border: 1px solid red;
   margin: 1rem;
   justify-content: space-around;
 }
 
-@mixin lighten-color($base_color, $amount) {
+@mixin lighten-color($base_color, $amount) { //al usar lighten si el navegador (chrome) está en modo oscuro los claros funcionan como un cristal, es posible que solo modifique las transparencias
     background: lighten($base_color, $amount);
+}
+@mixin darkenen-color($base_color, $amount) {
+    background: darken($base_color, $amount);
 }
 
 // 3. Estilos principales
 // ----------------------------------------------
+
 body {
     background-color: $secondary-colorA;
     display: grid;
@@ -44,6 +51,7 @@ body {
                          "color color color card card"
                          "lorem lorem lorem card card";
     font-family: $font-sono;
+    margin: 0;
 }
 nav {
     grid-area: nav;
@@ -60,35 +68,118 @@ ul {
 
 .gradient_container{
     grid-area: color;
+    display: flex;
+    flex-direction: column;
     background-color: $terciary-colorA;
     height: 25rem;
     margin: 1rem;
-    border: 1px solid red;
-}
-
-.card {
-    grid-area: card;
-    background-color: $terciary-colorA;
-    //width: 100%;
-    height: 50rem;
-    margin: 1rem;
+    border: 1px solid blue;
+    align-content: center;
 }
 
 h1 {
     font-size: 1.5rem;
-    margin: 0.5rem;
+    margin: 1rem;
     text-align: center;
     font-weight: 500;
+    border: 1px solid black;
 }
 
 .gradients {
     //background-color: #B1CC28;
-    height: 1rem;
-    //margin: auto;
     height: 4rem;
     width: 4rem;
     border: 1px solid black;
-    background-color: $quinary-colorA;
+    
+}
+
+#basecolor1{
+ background-color: $base_color1;
+}
+#lighten1 {
+    @include lighten-color($base_color1, 40% )
+}
+#lighten2 {
+    @include lighten-color($base_color1, 30% )
+}
+#lighten3 {
+    @include lighten-color($base_color1, 20% )
+}
+#lighten4 {
+    @include lighten-color($base_color1, 10% )
+}
+
+#darken1 {
+    @include darkenen-color($base_color1, 10%)
+}
+#darken2 {
+    @include darkenen-color($base_color1, 20%)
+}
+#darken3 {
+    @include darkenen-color($base_color1, 30%)
+}
+#darken4 {
+    @include darkenen-color($base_color1, 40%)
+}
+
+
+#basecolor2{
+ background-color: $base_color2;
+}
+#lighten5 {
+    @include lighten-color($base_color2, 40% )
+}
+#lighten6 {
+    @include lighten-color($base_color2, 30% )
+}
+#lighten7 {
+    @include lighten-color($base_color2, 20% )
+}
+#lighten8 {
+    @include lighten-color($base_color2, 10% )
+}
+
+#darken5 {
+    @include darkenen-color($base_color2, 10%)
+}
+#darken6 {
+    @include darkenen-color($base_color2, 20%)
+}
+#darken7 {
+    @include darkenen-color($base_color2, 30%)
+}
+#darken8 {
+    @include darkenen-color($base_color2, 40%)
+}
+
+
+#basecolor3{
+ background-color: $base_color3;
+}
+#lighten9 {
+    @include lighten-color($base_color3, 40% )
+}
+#lighten10 {
+    @include lighten-color($base_color3, 30% )
+}
+#lighten11 {
+    @include lighten-color($base_color3, 20% )
+}
+#lighten12 {
+    @include lighten-color($base_color3, 10% )
+}
+
+#darken9 {
+    @include darkenen-color($base_color3, 10%)
+}
+#darken10 {
+    @include darkenen-color($base_color3, 20%)
+}
+#darken11 {
+    @include darkenen-color($base_color3, 30%)
+}
+#darken12 {
+    @include darkenen-color($base_color3, 40%)
 }
 
 .gradient1 {
@@ -102,7 +193,46 @@ h1 {
 .gradient3{
     @include gradient1-style();
 }
-#lighten1 {
-    @include lighten-color($cuaternary-colorA, 20%)
+
+.lorem{
+    background-color: #B1CC28;
+    grid-area: lorem;
+    margin: 1rem;
+    border: 1px solid red; 
+    text-align: justify;  
+}
+.lorem p{
+    margin: 1rem;
+}
+
+.card {
+    grid-area: card;
+    background-color: $terciary-colorA;
+    margin: 1rem;   
+    display: grid;
+    grid-template-areas: "image"
+                        "text"
+                        "button";
+    padding: 1rem;
+    //align-content: space-between;
+}
+
+.card_img{
+    grid-area: image;
+    border: 3px solid red;
     
+}
+.card img{
+    max-width: 20rem;
+    
+}
+
+.card_text{
+    grid-area: text;
+    border: 1px solid blue;
+}
+
+.card_button{
+    grid-area: button;
+    border: 1px solid black;
 }

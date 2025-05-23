@@ -6,6 +6,7 @@ body {
   gap: 0, 5rem;
   grid-template-areas: "nav nav nav nav nav" "color color color card card" "lorem lorem lorem card card";
   font-family: "Sono", monospace;
+  margin: 0;
 }
 
 nav {
@@ -23,38 +24,140 @@ ul {
 
 .gradient_container {
   grid-area: color;
+  display: flex;
+  flex-direction: column;
   background-color: #106E93;
   height: 25rem;
   margin: 1rem;
-  border: 1px solid red;
-}
-
-.card {
-  grid-area: card;
-  background-color: #106E93;
-  height: 50rem;
-  margin: 1rem;
+  border: 1px solid blue;
+  align-content: center;
 }
 
 h1 {
   font-size: 1.5rem;
-  margin: 0.5rem;
+  margin: 1rem;
   text-align: center;
   font-weight: 500;
+  border: 1px solid black;
 }
 
 .gradients {
-  height: 1rem;
   height: 4rem;
   width: 4rem;
   border: 1px solid black;
+}
+
+#basecolor1 {
+  background-color: #B10612;
+}
+
+#lighten1 {
+  background: rgb(250.9672131148, 136.0327868852, 144.0983606557);
+}
+
+#lighten2 {
+  background: rgb(249.2950819672, 86.7049180328, 98.1147540984);
+}
+
+#lighten3 {
+  background: rgb(247.6229508197, 37.3770491803, 52.131147541);
+}
+
+#lighten4 {
+  background: rgb(226.3278688525, 7.6721311475, 23.0163934426);
+}
+
+#darken1 {
+  background: rgb(127.6721311475, 4.3278688525, 12.9836065574);
+}
+
+#darken2 {
+  background: rgb(78.3442622951, 2.6557377049, 7.9672131148);
+}
+
+#darken3 {
+  background: rgb(29.0163934426, 0.9836065574, 2.9508196721);
+}
+
+#darken4 {
+  background: black;
+}
+
+#basecolor2 {
   background-color: #B1CC28;
+}
+
+#lighten5 {
+  background: rgb(237.9754098361, 244.8360655738, 203.1639344262);
+}
+
+#lighten6 {
+  background: rgb(223.9713114754, 236.4754098361, 160.5245901639);
+}
+
+#lighten7 {
+  background: rgb(209.9672131148, 228.1147540984, 117.8852459016);
+}
+
+#lighten8 {
+  background: rgb(195.9631147541, 219.7540983607, 75.2459016393);
+}
+
+#darken5 {
+  background: rgb(140.0040983607, 161.3606557377, 31.6393442623);
+}
+
+#darken6 {
+  background: rgb(103.0081967213, 118.7213114754, 23.2786885246);
+}
+
+#darken7 {
+  background: rgb(66.012295082, 76.0819672131, 14.9180327869);
+}
+
+#darken8 {
+  background: rgb(29.0163934426, 33.4426229508, 6.5573770492);
+}
+
+#basecolor3 {
+  background-color: #4570ba;
+}
+
+#lighten9 {
+  background: rgb(217.8, 226.4, 241.2);
+}
+
+#lighten10 {
+  background: rgb(180.6, 197.8, 227.4);
+}
+
+#lighten11 {
+  background: rgb(143.4, 169.2, 213.6);
+}
+
+#lighten12 {
+  background: rgb(106.2, 140.6, 199.8);
+}
+
+#darken9 {
+  background: rgb(55.2, 89.6, 148.8);
+}
+
+#darken10 {
+  background: rgb(41.4, 67.2, 111.6);
+}
+
+#darken11 {
+  background: rgb(27.6, 44.8, 74.4);
+}
+
+#darken12 {
+  background: rgb(13.8, 22.4, 37.2);
 }
 
 .gradient1 {
   display: flex;
   flex-direction: row;
-  border: 1px solid red;
   margin: 1rem;
   justify-content: space-around;
 }
@@ -62,7 +165,6 @@ h1 {
 .gradient2 {
   display: flex;
   flex-direction: row;
-  border: 1px solid red;
   margin: 1rem;
   justify-content: space-around;
 }
@@ -70,13 +172,48 @@ h1 {
 .gradient3 {
   display: flex;
   flex-direction: row;
-  border: 1px solid red;
   margin: 1rem;
   justify-content: space-around;
 }
 
-#lighten1 {
-  background: rgb(247.6229508197, 37.3770491803, 52.131147541);
+.lorem {
+  background-color: #B1CC28;
+  grid-area: lorem;
+  margin: 1rem;
+  border: 1px solid red;
+  text-align: justify;
+}
+
+.lorem p {
+  margin: 1rem;
+}
+
+.card {
+  grid-area: card;
+  background-color: #106E93;
+  margin: 1rem;
+  display: grid;
+  grid-template-areas: "image" "text" "button";
+  padding: 1rem;
+}
+
+.card_img {
+  grid-area: image;
+  border: 3px solid red;
+}
+
+.card img {
+  max-width: 20rem;
+}
+
+.card_text {
+  grid-area: text;
+  border: 1px solid blue;
+}
+
+.card_button {
+  grid-area: button;
+  border: 1px solid black;
 }
 
 /*# sourceMappingURL=style.css.map */
