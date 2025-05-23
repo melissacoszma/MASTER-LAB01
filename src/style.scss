@@ -20,25 +20,34 @@
 
 // 2. Mixins
 // ----------------------------------------------
+@mixin gradient1-style {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid red;
+  margin: 1rem;
+  justify-content: space-around;
+}
 
+@mixin lighten-color($base_color, $amount) {
+    background: lighten($base_color, $amount);
+}
 
 // 3. Estilos principales
 // ----------------------------------------------
 body {
     background-color: $secondary-colorA;
     display: grid;
-    grid-template-columns: 1fr 1fr 2fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 2rem auto;
     gap: 0,5rem;
-    grid-template-areas: "nav nav nav" 
-                         "color color card"
-                         "lorem lorem card";
+    grid-template-areas: "nav nav nav nav nav" 
+                         "color color color card card"
+                         "lorem lorem lorem card card";
     font-family: $font-sono;
 }
 nav {
     grid-area: nav;
-    background-color: $quinary-colorA;
-    border: 1px solid $cuaternary-colorA;
+    background-color: $terciary-colorA;
     height: 2rem;
     position: sticky;
     display: flex;  
@@ -51,16 +60,49 @@ ul {
 
 .gradient_container{
     grid-area: color;
-    background-color: $quinary-colorA;
-    width: 100%;
-    height: 100%;
+    background-color: $terciary-colorA;
+    height: 25rem;
     margin: 1rem;
+    border: 1px solid red;
 }
 
 .card {
     grid-area: card;
-    background-color: $quinary-colorA;
-    width: 100%;
-    height: 100%;
+    background-color: $terciary-colorA;
+    //width: 100%;
+    height: 50rem;
     margin: 1rem;
+}
+
+h1 {
+    font-size: 1.5rem;
+    margin: 0.5rem;
+    text-align: center;
+    font-weight: 500;
+}
+
+.gradients {
+    //background-color: #B1CC28;
+    height: 1rem;
+    //margin: auto;
+    height: 4rem;
+    width: 4rem;
+    border: 1px solid black;
+    background-color: $quinary-colorA;
+}
+
+.gradient1 {
+    @include gradient1-style(); 
+}
+
+.gradient2 {
+    @include gradient1-style();
+}
+
+.gradient3{
+    @include gradient1-style();
+}
+#lighten1 {
+    @include lighten-color($cuaternary-colorA, 20%)
+    
 }
