@@ -54,7 +54,6 @@
   justify-content: space-around;
 }
 
-<<<<<<< HEAD
 @mixin interactive-style {
      transition: background-color 0.1s ease;
         
@@ -83,10 +82,6 @@
     box-shadow: none;
     appearance: none;
     @include interactive-style();
-=======
-@mixin lighten-color($base_color, $amount) { //al usar lighten si el navegador (chrome) está en modo oscuro los claros funcionan como un cristal, es posible que solo modifique las transparencias
-    background: lighten($base_color, $amount);
->>>>>>> 62d56f1d95b28cc08d5ae9a07a4de519cd628b52
 }
 @mixin darkenen-color($base_color, $amount) {
     background: darken($base_color, $amount);
@@ -104,11 +99,7 @@ body {
     grid-template-areas: "nav nav nav nav nav" 
                          "color color color card card"
                          "lorem lorem lorem card card";
-<<<<<<< HEAD
     @include principal_font();
-=======
-    font-family: $font-sono;
->>>>>>> 62d56f1d95b28cc08d5ae9a07a4de519cd628b52
     margin: 0;
 }
 
@@ -193,7 +184,6 @@ nav {
     background-color: $terciary-colorA;
     height: 25rem;
     margin: 1rem;
-<<<<<<< HEAD
     align-content: center;
 
     h1 {
@@ -219,32 +209,11 @@ nav {
         @include secondary_font();
         font-size: 13px;
     }
-=======
-    border: 1px solid blue;
-    align-content: center;
-}
-
-h1 {
-    font-size: 1.5rem;
-    margin: 1rem;
-    text-align: center;
-    font-weight: 500;
-    border: 1px solid black;
-}
-
-.gradients {
-    //background-color: #B1CC28;
-    height: 4rem;
-    width: 4rem;
-    border: 1px solid black;
-    
->>>>>>> 62d56f1d95b28cc08d5ae9a07a4de519cd628b52
 }
 
 #basecolor1{
  background-color: $base_color1;
 }
-<<<<<<< HEAD
 #lighten4 {
     @include lighten-color($base_color1, 40% )
 }
@@ -255,18 +224,6 @@ h1 {
     @include lighten-color($base_color1, 20% )
 }
 #lighten1 {
-=======
-#lighten1 {
-    @include lighten-color($base_color1, 40% )
-}
-#lighten2 {
-    @include lighten-color($base_color1, 30% )
-}
-#lighten3 {
-    @include lighten-color($base_color1, 20% )
-}
-#lighten4 {
->>>>>>> 62d56f1d95b28cc08d5ae9a07a4de519cd628b52
     @include lighten-color($base_color1, 10% )
 }
 
@@ -287,7 +244,6 @@ h1 {
 #basecolor2{
  background-color: $base_color2;
 }
-<<<<<<< HEAD
 #lighten8 {
     @include lighten-color($base_color2, 40% )
 }
@@ -298,18 +254,6 @@ h1 {
     @include lighten-color($base_color2, 20% )
 }
 #lighten5 {
-=======
-#lighten5 {
-    @include lighten-color($base_color2, 40% )
-}
-#lighten6 {
-    @include lighten-color($base_color2, 30% )
-}
-#lighten7 {
-    @include lighten-color($base_color2, 20% )
-}
-#lighten8 {
->>>>>>> 62d56f1d95b28cc08d5ae9a07a4de519cd628b52
     @include lighten-color($base_color2, 10% )
 }
 
@@ -330,7 +274,6 @@ h1 {
 #basecolor3{
  background-color: $base_color3;
 }
-<<<<<<< HEAD
 #lighten12 {
     @include lighten-color($base_color3, 40% )
 }
@@ -341,18 +284,6 @@ h1 {
     @include lighten-color($base_color3, 20% )
 }
 #lighten9 {
-=======
-#lighten9 {
-    @include lighten-color($base_color3, 40% )
-}
-#lighten10 {
-    @include lighten-color($base_color3, 30% )
-}
-#lighten11 {
-    @include lighten-color($base_color3, 20% )
-}
-#lighten12 {
->>>>>>> 62d56f1d95b28cc08d5ae9a07a4de519cd628b52
     @include lighten-color($base_color3, 10% )
 }
 
@@ -382,7 +313,6 @@ h1 {
 }
 
 .lorem{
-<<<<<<< HEAD
     background-color: $terciary-colorA;
     grid-area: lorem;
     margin: 1rem;
@@ -395,17 +325,6 @@ h1 {
     }
 }
 
-=======
-    background-color: #B1CC28;
-    grid-area: lorem;
-    margin: 1rem;
-    border: 1px solid red; 
-    text-align: justify;  
-}
-.lorem p{
-    margin: 1rem;
-}
->>>>>>> 62d56f1d95b28cc08d5ae9a07a4de519cd628b52
 
 .card {
     grid-area: card;
@@ -416,7 +335,6 @@ h1 {
                         "text"
                         "button";
     padding: 1rem;
-<<<<<<< HEAD
     @include secondary_font();
 }
 
@@ -456,29 +374,10 @@ h1 {
         margin: 0px;
         
     }
-=======
-    //align-content: space-between;
-}
-
-.card_img{
-    grid-area: image;
-    border: 3px solid red;
-    
-}
-.card img{
-    max-width: 20rem;
-    
-}
-
-.card_text{
-    grid-area: text;
-    border: 1px solid blue;
->>>>>>> 62d56f1d95b28cc08d5ae9a07a4de519cd628b52
 }
 
 .card_button{
     grid-area: button;
-<<<<<<< HEAD
     padding: 1rem;
     display: flex;
     flex-direction: row-reverse;
@@ -497,7 +396,4 @@ h1 {
                          "color color color color color"
                          "lorem lorem lorem card card";
     }
-=======
-    border: 1px solid black;
->>>>>>> 62d56f1d95b28cc08d5ae9a07a4de519cd628b52
 }
