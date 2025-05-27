@@ -6,55 +6,237 @@ body {
   gap: 0, 5rem;
   grid-template-areas: "nav nav nav nav nav" "color color color card card" "lorem lorem lorem card card";
   font-family: "Sono", monospace;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #B1CC28;
+  margin: 0;
 }
 
+@media (max-width: 1200px) {
+  body {
+    background-color: #B10612;
+    grid-template-areas: "nav nav nav nav nav" "color color color color color" "lorem lorem lorem card card";
+  }
+}
 nav {
   grid-area: nav;
   background-color: #106E93;
   height: 2rem;
   position: sticky;
+  top: 0;
+  z-index: 99;
   display: flex;
-  flex-wrap: wrap;
+  padding: 0 1rem;
 }
 
-ul {
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  width: 100%;
+}
+.menu li {
+  color: #B1CC28;
   margin: auto;
+  padding: 0 0.5rem;
+  cursor: pointer;
+}
+.menu li:hover {
+  color: rgb(196.5672131148, 220.1147540984, 77.0852459016);
+  transform: scale(1.1);
+  transform-origin: center;
+}
+.menu li.mode {
+  text-align: center;
+  position: relative;
+}
+.menu li.mode:hover .mode-text {
+  display: inline-block;
+  transform: scale(1.1);
+}
+.menu li.mode .showmodes {
+  display: none;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: max-content;
+  z-index: 100;
+}
+.menu li.mode:hover .showmodes {
+  display: block;
+}
+.menu .modes {
+  display: flex;
+  flex-direction: column;
+}
+.menu .modes.modes button {
+  background-color: #B1CC28;
+  font-family: "Sono", monospace;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #B1CC28;
+  color: #0A0A0A;
+  border-radius: 10%;
+  border: none;
+  box-shadow: none;
+  appearance: none;
+  transition: background-color 0.1s ease;
+}
+.menu .modes.modes button:hover {
+  background: rgb(203.8713114754, 224.4754098361, 99.3245901639);
+}
+.menu .modes.modes button:active {
+  background: rgb(141.6, 163.2, 32);
 }
 
 .gradient_container {
   grid-area: color;
+  display: flex;
+  flex-direction: column;
   background-color: #106E93;
   height: 25rem;
   margin: 1rem;
-  border: 1px solid red;
+  align-content: center;
 }
-
-.card {
-  grid-area: card;
-  background-color: #106E93;
-  height: 50rem;
-  margin: 1rem;
-}
-
-h1 {
-  font-size: 1.5rem;
-  margin: 0.5rem;
-  text-align: center;
+.gradient_container h1 {
+  font-size: 36px;
   font-weight: 500;
+  margin: 1rem;
+  text-align: center;
+  color: #B1CC28;
 }
 
 .gradients {
-  height: 1rem;
   height: 4rem;
   width: 4rem;
-  border: 1px solid black;
+  align-content: center;
+  text-align: center;
+  margin-inline: 0.2rem;
+  min-width: 4rem;
+}
+.gradients span {
+  font-family: "Epilogue", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #0A0A0A;
+  font-size: 13px;
+}
+
+#basecolor1 {
+  background-color: #B10612;
+}
+
+#lighten4 {
+  background: rgb(248.5672131148, 65.2327868852, 78.0983606557);
+}
+
+#lighten3 {
+  background: rgb(247.4950819672, 33.6049180328, 48.6147540984);
+}
+
+#lighten2 {
+  background: rgb(240.2557377049, 8.1442622951, 24.4327868852);
+}
+
+#lighten1 {
+  background: rgb(208.6278688525, 7.0721311475, 21.2163934426);
+}
+
+#darken1 {
+  background: rgb(159.3, 5.4, 16.2);
+}
+
+#darken2 {
+  background: rgb(141.6, 4.8, 14.4);
+}
+
+#darken3 {
+  background: rgb(123.9, 4.2, 12.6);
+}
+
+#darken4 {
+  background: rgb(106.2, 3.6, 10.8);
+}
+
+#basecolor2 {
   background-color: #B1CC28;
+}
+
+#lighten8 {
+  background: rgb(211.1754098361, 228.8360655738, 121.5639344262);
+}
+
+#lighten7 {
+  background: rgb(203.8713114754, 224.4754098361, 99.3245901639);
+}
+
+#lighten6 {
+  background: rgb(196.5672131148, 220.1147540984, 77.0852459016);
+}
+
+#lighten5 {
+  background: rgb(189.2631147541, 215.7540983607, 54.8459016393);
+}
+
+#darken5 {
+  background: rgb(159.3, 183.6, 36);
+}
+
+#darken6 {
+  background: rgb(141.6, 163.2, 32);
+}
+
+#darken7 {
+  background: rgb(123.9, 142.8, 28);
+}
+
+#darken8 {
+  background: rgb(106.2, 122.4, 24);
+}
+
+#basecolor3 {
+  background-color: #4570ba;
+}
+
+#lighten12 {
+  background: rgb(143.4, 169.2, 213.6);
+}
+
+#lighten11 {
+  background: rgb(124.8, 154.9, 206.7);
+}
+
+#lighten10 {
+  background: rgb(106.2, 140.6, 199.8);
+}
+
+#lighten9 {
+  background: rgb(87.6, 126.3, 192.9);
+}
+
+#darken9 {
+  background: rgb(62.1, 100.8, 167.4);
+}
+
+#darken10 {
+  background: rgb(55.2, 89.6, 148.8);
+}
+
+#darken11 {
+  background: rgb(48.3, 78.4, 130.2);
+}
+
+#darken12 {
+  background: rgb(41.4, 67.2, 111.6);
 }
 
 .gradient1 {
   display: flex;
   flex-direction: row;
-  border: 1px solid red;
   margin: 1rem;
   justify-content: space-around;
 }
@@ -62,7 +244,6 @@ h1 {
 .gradient2 {
   display: flex;
   flex-direction: row;
-  border: 1px solid red;
   margin: 1rem;
   justify-content: space-around;
 }
@@ -70,13 +251,99 @@ h1 {
 .gradient3 {
   display: flex;
   flex-direction: row;
-  border: 1px solid red;
   margin: 1rem;
   justify-content: space-around;
 }
 
-#lighten1 {
-  background: rgb(247.6229508197, 37.3770491803, 52.131147541);
+.lorem {
+  background-color: #106E93;
+  grid-area: lorem;
+  margin: 1rem;
+  text-align: justify;
+  align-content: center;
+  font-family: "Epilogue", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #0A0A0A;
+}
+.lorem p {
+  margin: 1rem;
+}
+
+.card {
+  grid-area: card;
+  background-color: #106E93;
+  margin: 1rem;
+  display: grid;
+  grid-template-areas: "image" "text" "button";
+  padding: 1rem;
+  font-family: "Epilogue", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #0A0A0A;
+}
+
+.card_img {
+  grid-area: image;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: white;
+}
+.card_img img {
+  max-width: 20rem;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.card_text {
+  grid-area: text;
+}
+.card_text h2 {
+  padding: 1rem;
+  margin: 0px;
+  margin-top: 1rem;
+}
+.card_text p {
+  text-align: justify;
+  text-justify: distribute;
+  font-size: 14px;
+  padding: 1rem;
+  color: #0A0A0A;
+  margin: 0px;
+}
+
+.card_button {
+  grid-area: button;
+  padding: 1rem;
+  display: flex;
+  flex-direction: row-reverse;
+}
+.card_button button {
+  width: 5rem;
+  height: 2rem;
+  background-color: #B1CC28;
+  font-family: "Sono", monospace;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #B1CC28;
+  color: #0A0A0A;
+  border-radius: 10%;
+  border: none;
+  box-shadow: none;
+  appearance: none;
+  transition: background-color 0.1s ease;
+}
+.card_button button:hover {
+  background: rgb(203.8713114754, 224.4754098361, 99.3245901639);
+}
+.card_button button:active {
+  background: rgb(141.6, 163.2, 32);
 }
 
 /*# sourceMappingURL=style.css.map */
