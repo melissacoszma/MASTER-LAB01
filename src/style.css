@@ -6,10 +6,13 @@ body {
   gap: 0, 5rem;
   grid-template-areas: "nav nav nav nav nav" "color color color card card" "lorem lorem lorem card card";
   font-family: "Sono", monospace;
+<<<<<<< HEAD
   font-size: 16px;
   font-weight: 400;
   line-height: 1.2;
   color: #B1CC28;
+=======
+>>>>>>> 62d56f1d95b28cc08d5ae9a07a4de519cd628b52
   margin: 0;
 }
 
@@ -99,6 +102,7 @@ nav {
   background-color: #106E93;
   height: 25rem;
   margin: 1rem;
+<<<<<<< HEAD
   align-content: center;
 }
 .gradient_container h1 {
@@ -107,11 +111,24 @@ nav {
   margin: 1rem;
   text-align: center;
   color: #B1CC28;
+=======
+  border: 1px solid blue;
+  align-content: center;
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin: 1rem;
+  text-align: center;
+  font-weight: 500;
+  border: 1px solid black;
+>>>>>>> 62d56f1d95b28cc08d5ae9a07a4de519cd628b52
 }
 
 .gradients {
   height: 4rem;
   width: 4rem;
+<<<<<<< HEAD
   align-content: center;
   text-align: center;
   margin-inline: 0.2rem;
@@ -124,12 +141,16 @@ nav {
   line-height: 1.5;
   color: #0A0A0A;
   font-size: 13px;
+=======
+  border: 1px solid black;
+>>>>>>> 62d56f1d95b28cc08d5ae9a07a4de519cd628b52
 }
 
 #basecolor1 {
   background-color: #B10612;
 }
 
+<<<<<<< HEAD
 #lighten4 {
   background: rgb(248.5672131148, 65.2327868852, 78.0983606557);
 }
@@ -160,12 +181,45 @@ nav {
 
 #darken4 {
   background: rgb(106.2, 3.6, 10.8);
+=======
+#lighten1 {
+  background: rgb(250.9672131148, 136.0327868852, 144.0983606557);
+}
+
+#lighten2 {
+  background: rgb(249.2950819672, 86.7049180328, 98.1147540984);
+}
+
+#lighten3 {
+  background: rgb(247.6229508197, 37.3770491803, 52.131147541);
+}
+
+#lighten4 {
+  background: rgb(226.3278688525, 7.6721311475, 23.0163934426);
+}
+
+#darken1 {
+  background: rgb(127.6721311475, 4.3278688525, 12.9836065574);
+}
+
+#darken2 {
+  background: rgb(78.3442622951, 2.6557377049, 7.9672131148);
+}
+
+#darken3 {
+  background: rgb(29.0163934426, 0.9836065574, 2.9508196721);
+}
+
+#darken4 {
+  background: black;
+>>>>>>> 62d56f1d95b28cc08d5ae9a07a4de519cd628b52
 }
 
 #basecolor2 {
   background-color: #B1CC28;
 }
 
+<<<<<<< HEAD
 #lighten8 {
   background: rgb(211.1754098361, 228.8360655738, 121.5639344262);
 }
@@ -196,12 +250,45 @@ nav {
 
 #darken8 {
   background: rgb(106.2, 122.4, 24);
+=======
+#lighten5 {
+  background: rgb(237.9754098361, 244.8360655738, 203.1639344262);
+}
+
+#lighten6 {
+  background: rgb(223.9713114754, 236.4754098361, 160.5245901639);
+}
+
+#lighten7 {
+  background: rgb(209.9672131148, 228.1147540984, 117.8852459016);
+}
+
+#lighten8 {
+  background: rgb(195.9631147541, 219.7540983607, 75.2459016393);
+}
+
+#darken5 {
+  background: rgb(140.0040983607, 161.3606557377, 31.6393442623);
+}
+
+#darken6 {
+  background: rgb(103.0081967213, 118.7213114754, 23.2786885246);
+}
+
+#darken7 {
+  background: rgb(66.012295082, 76.0819672131, 14.9180327869);
+}
+
+#darken8 {
+  background: rgb(29.0163934426, 33.4426229508, 6.5573770492);
+>>>>>>> 62d56f1d95b28cc08d5ae9a07a4de519cd628b52
 }
 
 #basecolor3 {
   background-color: #4570ba;
 }
 
+<<<<<<< HEAD
 #lighten12 {
   background: rgb(143.4, 169.2, 213.6);
 }
@@ -234,6 +321,40 @@ nav {
   background: rgb(41.4, 67.2, 111.6);
 }
 
+=======
+#lighten9 {
+  background: rgb(217.8, 226.4, 241.2);
+}
+
+#lighten10 {
+  background: rgb(180.6, 197.8, 227.4);
+}
+
+#lighten11 {
+  background: rgb(143.4, 169.2, 213.6);
+}
+
+#lighten12 {
+  background: rgb(106.2, 140.6, 199.8);
+}
+
+#darken9 {
+  background: rgb(55.2, 89.6, 148.8);
+}
+
+#darken10 {
+  background: rgb(41.4, 67.2, 111.6);
+}
+
+#darken11 {
+  background: rgb(27.6, 44.8, 74.4);
+}
+
+#darken12 {
+  background: rgb(13.8, 22.4, 37.2);
+}
+
+>>>>>>> 62d56f1d95b28cc08d5ae9a07a4de519cd628b52
 .gradient1 {
   display: flex;
   flex-direction: row;
@@ -256,6 +377,7 @@ nav {
 }
 
 .lorem {
+<<<<<<< HEAD
   background-color: #106E93;
   grid-area: lorem;
   margin: 1rem;
@@ -267,6 +389,15 @@ nav {
   line-height: 1.5;
   color: #0A0A0A;
 }
+=======
+  background-color: #B1CC28;
+  grid-area: lorem;
+  margin: 1rem;
+  border: 1px solid red;
+  text-align: justify;
+}
+
+>>>>>>> 62d56f1d95b28cc08d5ae9a07a4de519cd628b52
 .lorem p {
   margin: 1rem;
 }
@@ -278,15 +409,19 @@ nav {
   display: grid;
   grid-template-areas: "image" "text" "button";
   padding: 1rem;
+<<<<<<< HEAD
   font-family: "Epilogue", sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 1.5;
   color: #0A0A0A;
+=======
+>>>>>>> 62d56f1d95b28cc08d5ae9a07a4de519cd628b52
 }
 
 .card_img {
   grid-area: image;
+<<<<<<< HEAD
   display: flex;
   justify-content: center;
   align-items: center;
@@ -298,10 +433,18 @@ nav {
   width: 100%;
   height: auto;
   object-fit: contain;
+=======
+  border: 3px solid red;
+}
+
+.card img {
+  max-width: 20rem;
+>>>>>>> 62d56f1d95b28cc08d5ae9a07a4de519cd628b52
 }
 
 .card_text {
   grid-area: text;
+<<<<<<< HEAD
 }
 .card_text h2 {
   padding: 1rem;
@@ -315,10 +458,14 @@ nav {
   padding: 1rem;
   color: #0A0A0A;
   margin: 0px;
+=======
+  border: 1px solid blue;
+>>>>>>> 62d56f1d95b28cc08d5ae9a07a4de519cd628b52
 }
 
 .card_button {
   grid-area: button;
+<<<<<<< HEAD
   padding: 1rem;
   display: flex;
   flex-direction: row-reverse;
@@ -344,6 +491,9 @@ nav {
 }
 .card_button button:active {
   background: rgb(141.6, 163.2, 32);
+=======
+  border: 1px solid black;
+>>>>>>> 62d56f1d95b28cc08d5ae9a07a4de519cd628b52
 }
 
 /*# sourceMappingURL=style.css.map */
