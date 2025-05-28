@@ -1,5 +1,5 @@
 body {
-  background-color: #061b23;
+  background-color: white;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 2rem auto;
@@ -15,7 +15,7 @@ body {
 
 nav {
   grid-area: nav;
-  background-color: #106E93;
+  background-color: grey;
   height: 2rem;
   position: sticky;
   top: 0;
@@ -75,9 +75,9 @@ nav {
   color: #0A0A0A;
   border-radius: 10%;
   border: none;
-  box-shadow: none;
   appearance: none;
   transition: background-color 0.1s ease;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 .menu .modes.modes button:hover {
   background: rgb(203.8713114754, 224.4754098361, 99.3245901639);
@@ -90,10 +90,11 @@ nav {
   grid-area: color;
   display: flex;
   flex-direction: column;
-  background-color: #106E93;
+  background-color: grey;
   height: 25rem;
   margin: 1rem;
   align-content: center;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 .gradient_container h1 {
   font-size: 36px;
@@ -250,7 +251,7 @@ nav {
 }
 
 .lorem {
-  background-color: #106E93;
+  background-color: grey;
   grid-area: lorem;
   margin: 1rem;
   text-align: justify;
@@ -260,6 +261,7 @@ nav {
   font-weight: 400;
   line-height: 1.5;
   color: #0A0A0A;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 .lorem p {
   margin: 1rem;
@@ -267,7 +269,7 @@ nav {
 
 .card {
   grid-area: card;
-  background-color: #106E93;
+  background-color: grey;
   margin: 1rem;
   display: grid;
   grid-template-areas: "image" "text" "button";
@@ -277,6 +279,7 @@ nav {
   font-weight: 400;
   line-height: 1.5;
   color: #0A0A0A;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .card_img {
@@ -329,9 +332,9 @@ nav {
   color: #0A0A0A;
   border-radius: 10%;
   border: none;
-  box-shadow: none;
   appearance: none;
   transition: background-color 0.1s ease;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 .card_button button:hover {
   background: rgb(203.8713114754, 224.4754098361, 99.3245901639);
@@ -397,4 +400,4 @@ nav {
   }
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style_lightmode.css.map */

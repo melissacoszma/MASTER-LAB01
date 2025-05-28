@@ -9,8 +9,8 @@
 // 1. Variables específicas 
 // ----------------------------------------------
     $primary-colorA: #0A0A0A;
-    $secondary-colorA: #061b23;
-    $terciary-colorA: #106E93;
+    $secondary-colorA: white;
+    $terciary-colorA: grey;
     $quinary-colorA: #B1CC28;
 
 
@@ -67,6 +67,9 @@
 @mixin darkenen-color($base_color, $amount) {
     background: color.scale($base_color, $lightness: -$amount );
 }
+@mixin sombrita{
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
 
 @mixin button_style{
     background-color: $quinary-colorA;
@@ -74,9 +77,9 @@
     color: $primary-colorA;
     border-radius: 10%;
     border: none;
-    box-shadow: none;
     appearance: none;
     @include interactive-style();
+    @include sombrita();
 }
 
 
@@ -178,6 +181,8 @@ nav {
     height: 25rem;
     margin: 1rem;
     align-content: center;
+    @include sombrita();
+
 
     h1 {
         font-size: 36px;
@@ -312,6 +317,7 @@ nav {
     text-align: justify;
     align-content: center; 
     @include secondary_font();
+    @include sombrita();
 
     p{
         margin: 1rem;
@@ -329,6 +335,8 @@ nav {
                         "button";
     padding: 1rem;
     @include secondary_font();
+    @include sombrita();
+
 }
 
 .card_img {
