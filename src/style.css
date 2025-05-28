@@ -13,12 +13,6 @@ body {
   margin: 0;
 }
 
-@media (max-width: 1200px) {
-  body {
-    background-color: #B10612;
-    grid-template-areas: "nav nav nav nav nav" "color color color color color" "lorem lorem lorem card card";
-  }
-}
 nav {
   grid-area: nav;
   background-color: #106E93;
@@ -344,6 +338,48 @@ nav {
 }
 .card_button button:active {
   background: rgb(141.6, 163.2, 32);
+}
+
+@media (max-width: 1200px) {
+  body {
+    background-color: #B10612;
+    grid-template-areas: "nav nav nav nav nav" "color color color color color" "lorem lorem lorem card card";
+  }
+  .lorem {
+    height: fit-content;
+  }
+}
+@media (max-width: 768px) {
+  body {
+    background-color: grey;
+    grid-template-areas: "nav nav nav nav nav" "color color color color color" "lorem lorem lorem lorem lorem" "card card card card card";
+  }
+  .gradient_container {
+    display: grid;
+    grid-template-areas: "title" "colors1 colors2 colors3";
+    height: fit-content;
+  }
+  .gradient_container h1 {
+    grid-area: title;
+  }
+  .gradient1 {
+    display: flex;
+    flex-direction: column;
+    grid-area: colors;
+  }
+  .gradient2 {
+    display: flex;
+    flex-direction: column;
+    grid-area: colors2;
+  }
+  .gradient3 {
+    display: flex;
+    flex-direction: column;
+    grid-area: colors3;
+  }
+  .card {
+    grid-template-areas: "image text" "image button";
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

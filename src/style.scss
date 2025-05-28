@@ -13,18 +13,13 @@
     $terciary-colorA: #106E93;
     $quinary-colorA: #B1CC28;
 
-    $base_color1: $cuaternary-colorA;
-    $base_color2: $quinary-colorA;
-    $base_color3: #4570ba;
-
 
     $base_color1: #B10612;
     $base_color2: $quinary-colorA;
     $base_color3: #4570ba;
 
     $desktop: 1200px;
-    $tablet: 992px;
-    $mobile: 768px;
+    $tablet: 768px;
 
    
 // 2. Mixins
@@ -83,9 +78,7 @@
     appearance: none;
     @include interactive-style();
 }
-@mixin darkenen-color($base_color, $amount) {
-    background: darken($base_color, $amount);
-}
+
 
 // 3. Estilos principales
 // ----------------------------------------------
@@ -396,4 +389,42 @@ nav {
                          "color color color color color"
                          "lorem lorem lorem card card";
     }
+
+    .lorem{
+        height: fit-content;
+    }
+}
+
+@media (max-width: $tablet){
+    body{
+        background-color: grey;
+         grid-template-areas: "nav nav nav nav nav" 
+                         "color color color color color"
+                         "lorem lorem lorem lorem lorem"
+                         "card card card card card";
+    }
+
+    .gradient_container{
+        display: grid;
+        grid-template-areas: "title"
+                            "colors1 colors2 colors3";
+        height: fit-content;
+
+        h1{
+            grid-area: title;
+        }
+    }
+
+    .gradient1 {
+        display: flex;
+        flex-direction: column;
+        grid-area: colors;
+    }
+  
+
+    .card {
+        grid-template-areas: "image text"
+                            "image button";
+   
+}
 }
