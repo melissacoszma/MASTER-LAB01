@@ -6,32 +6,20 @@
 // 
 // =============================================================================
 
-// 1. Variables específicas 
-// ----------------------------------------------
-    $primary-colorA: #0A0A0A;
-    $secondary-colorA: #061b23;
-    $terciary-colorA: #106E93;
-    $quinary-colorA: #B1CC28;
-
-
-    $base_color1: #B10612;
-    $base_color2: $quinary-colorA;
-    $base_color3: #4570ba;
-
-    $desktop: 1200px;
-    $tablet: 768px;
-
    
 // 2. Mixins
 // ----------------------------------------------
 @use "sass:color";
+
+@use "./var_darkmode" as var;
+//@use "./var_lightmode" as var;
 
 @mixin principal_font {
     font-family: "Sono", monospace;
     font-size: 16px;
     font-weight: 400;
     line-height: 1.2;
-    color: $quinary-colorA;
+    color: var.$quinary-colorA;
 }
 
 @mixin secondary_font {
@@ -39,7 +27,7 @@
     font-size: 14px;
     font-weight: 400;
     line-height: 1.5;
-    color: $primary-colorA;
+    color: var.$primary-colorA;
 }
 
 @mixin gradient1-style {
@@ -53,11 +41,11 @@
      transition: background-color 0.1s ease;
         
         &:hover {
-            @include lighten-color($quinary-colorA, 30%);
+            @include lighten-color(var.$quinary-colorA, 30%);
         }
         
         &:active {
-            @include darkenen-color($quinary-colorA, 20%);
+            @include darkenen-color(var.$quinary-colorA, 20%);
         }
 }
 
@@ -69,9 +57,9 @@
 }
 
 @mixin button_style{
-    background-color: $quinary-colorA;
+    background-color: var.$quinary-colorA;
     @include principal_font();
-    color: $primary-colorA;
+    color: var.$primary-colorA;
     border-radius: 10%;
     border: none;
     box-shadow: none;
@@ -84,7 +72,7 @@
 // ----------------------------------------------
 
 body {
-    background-color: $secondary-colorA;
+    background-color: var.$secondary-colorA;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 2rem auto;
@@ -99,13 +87,13 @@ body {
 
 nav {
     grid-area: nav;
-    background-color: $terciary-colorA;
-    height: 2rem;
+    background-color: var.$terciary-colorA;
+    //height: 2rem;
     position: sticky;
     top: 0;
     z-index: 99;
     display: flex;  
-    padding: 0 1rem; 
+    padding: 1.2rem; 
 }
 
 .menu {
@@ -113,16 +101,17 @@ nav {
     padding: 0;
     margin: 0; 
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 100%; 
     
   li {
-        color: $quinary-colorA;
-        margin: auto;
+        color: var.$quinary-colorA;
         padding: 0 0.5rem;
         cursor: pointer;
         
         &:hover {
-            color: color.scale($quinary-colorA, $lightness: 20%); 
+            color: color.scale(var.$quinary-colorA, $lightness: 20%); 
             transform: scale(1.1); // Escala el texto sin afectar el flujo
             transform-origin: center; // Escala desde el centro
         }
@@ -174,7 +163,7 @@ nav {
     grid-area: color;
     display: flex;
     flex-direction: column;
-    background-color: $terciary-colorA;
+    background-color: var.$terciary-colorA;
     height: 25rem;
     margin: 1rem;
     align-content: center;
@@ -184,7 +173,7 @@ nav {
         font-weight: 500;
         margin: 1rem;
         text-align: center;
-        color: $quinary-colorA;
+        color: var.$quinary-colorA;
     }
 }
 
@@ -204,93 +193,93 @@ nav {
     }
 }
 
-#basecolor1{
- background-color: $base_color1;
+.basecolor1{
+ background-color: var.$base_color1;
 }
-#lighten4 {
-    @include lighten-color($base_color1, 40% )
+.lighten4 {
+    @include lighten-color(var.$base_color1, 40% )
 }
-#lighten3 {
-    @include lighten-color($base_color1, 30% )
+.lighten3 {
+    @include lighten-color(var.$base_color1, 30% )
 }
-#lighten2 {
-    @include lighten-color($base_color1, 20% )
+.lighten2 {
+    @include lighten-color(var.$base_color1, 20% )
 }
-#lighten1 {
-    @include lighten-color($base_color1, 10% )
-}
-
-#darken1 {
-    @include darkenen-color($base_color1, 10%)
-}
-#darken2 {
-    @include darkenen-color($base_color1, 20%)
-}
-#darken3 {
-    @include darkenen-color($base_color1, 30%)
-}
-#darken4 {
-    @include darkenen-color($base_color1, 40%)
+.lighten1 {
+    @include lighten-color(var.$base_color1, 10% )
 }
 
-
-#basecolor2{
- background-color: $base_color2;
+.darken1 {
+    @include darkenen-color(var.$base_color1, 10%)
 }
-#lighten8 {
-    @include lighten-color($base_color2, 40% )
+.darken2 {
+    @include darkenen-color(var.$base_color1, 20%)
 }
-#lighten7 {
-    @include lighten-color($base_color2, 30% )
+.darken3 {
+    @include darkenen-color(var.$base_color1, 30%)
 }
-#lighten6 {
-    @include lighten-color($base_color2, 20% )
-}
-#lighten5 {
-    @include lighten-color($base_color2, 10% )
-}
-
-#darken5 {
-    @include darkenen-color($base_color2, 10%)
-}
-#darken6 {
-    @include darkenen-color($base_color2, 20%)
-}
-#darken7 {
-    @include darkenen-color($base_color2, 30%)
-}
-#darken8 {
-    @include darkenen-color($base_color2, 40%)
+.darken4 {
+    @include darkenen-color(var.$base_color1, 40%)
 }
 
 
-#basecolor3{
- background-color: $base_color3;
+.basecolor2{
+ background-color: var.$base_color2;
 }
-#lighten12 {
-    @include lighten-color($base_color3, 40% )
+.lighten8 {
+    @include lighten-color(var.$base_color2, 40% )
 }
-#lighten11 {
-    @include lighten-color($base_color3, 30% )
+.lighten7 {
+    @include lighten-color(var.$base_color2, 30% )
 }
-#lighten10 {
-    @include lighten-color($base_color3, 20% )
+.lighten6 {
+    @include lighten-color(var.$base_color2, 20% )
 }
-#lighten9 {
-    @include lighten-color($base_color3, 10% )
+.lighten5 {
+    @include lighten-color(var.$base_color2, 10% )
 }
 
-#darken9 {
-    @include darkenen-color($base_color3, 10%)
+.darken5 {
+    @include darkenen-color(var.$base_color2, 10%)
 }
-#darken10 {
-    @include darkenen-color($base_color3, 20%)
+.darken6 {
+    @include darkenen-color(var.$base_color2, 20%)
 }
-#darken11 {
-    @include darkenen-color($base_color3, 30%)
+.darken7 {
+    @include darkenen-color(var.$base_color2, 30%)
 }
-#darken12 {
-    @include darkenen-color($base_color3, 40%)
+.darken8 {
+    @include darkenen-color(var.$base_color2, 40%)
+}
+
+
+.basecolor3{
+ background-color: var.$base_color3;
+}
+.lighten12 {
+    @include lighten-color(var.$base_color3, 40% )
+}
+.lighten11 {
+    @include lighten-color(var.$base_color3, 30% )
+}
+.lighten10 {
+    @include lighten-color(var.$base_color3, 20% )
+}
+.lighten9 {
+    @include lighten-color(var.$base_color3, 10% )
+}
+
+.darken9 {
+    @include darkenen-color(var.$base_color3, 10%)
+}
+.darken10 {
+    @include darkenen-color(var.$base_color3, 20%)
+}
+.darken11 {
+    @include darkenen-color(var.$base_color3, 30%)
+}
+.darken12 {
+    @include darkenen-color(var.$base_color3, 40%)
 }
 
 .gradient1 {
@@ -306,7 +295,7 @@ nav {
 }
 
 .lorem{
-    background-color: $terciary-colorA;
+    background-color: var.$terciary-colorA;
     grid-area: lorem;
     margin: 1rem;
     text-align: justify;
@@ -321,7 +310,7 @@ nav {
 
 .card {
     grid-area: card;
-    background-color: $terciary-colorA;
+    background-color: var.$terciary-colorA;
     margin: 1rem;   
     display: grid;
     grid-template-areas: "image"
@@ -363,7 +352,7 @@ nav {
         text-justify:distribute;
         font-size: 14px;
         padding: 1rem;
-        color: $primary-colorA;
+        color: var.$primary-colorA;
         margin: 0px;
         
     }
@@ -382,7 +371,7 @@ nav {
     }
 }
 
-@media (max-width: $desktop){
+@media (max-width: var.$desktop){
     body{
          grid-template-areas: "nav nav nav nav nav" 
                          "color color color color color"
@@ -394,12 +383,13 @@ nav {
     }
 }
 
-@media (max-width: $tablet){
+@media (max-width: var.$tablet){
     body{
          grid-template-areas: "nav nav nav nav nav" 
                          "color color color color color"
                          "lorem lorem lorem lorem lorem"
                          "card card card card card";
+        grid-template-rows: auto;                 
     }
     nav{
         position: static;
@@ -412,12 +402,11 @@ nav {
 
          li {
             margin-block: 0.5rem;
-            border-bottom: 1px solid $quinary-colorA;
+            border-bottom: 1px solid var.$quinary-colorA;
             }
     }
 
     .gradient_container{
-        margin-top: 11rem;
         display: grid;
         grid-template-areas: "title title title"
                             "colors1 colors2 colors3";

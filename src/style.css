@@ -16,12 +16,11 @@ body {
 nav {
   grid-area: nav;
   background-color: #106E93;
-  height: 2rem;
   position: sticky;
   top: 0;
   z-index: 99;
   display: flex;
-  padding: 0 1rem;
+  padding: 1.2rem;
 }
 
 .menu {
@@ -29,11 +28,12 @@ nav {
   padding: 0;
   margin: 0;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
 }
 .menu li {
   color: #B1CC28;
-  margin: auto;
   padding: 0 0.5rem;
   cursor: pointer;
 }
@@ -120,111 +120,111 @@ nav {
   font-size: 13px;
 }
 
-#basecolor1 {
+.basecolor1 {
   background-color: #B10612;
 }
 
-#lighten4 {
+.lighten4 {
   background: rgb(248.5672131148, 65.2327868852, 78.0983606557);
 }
 
-#lighten3 {
+.lighten3 {
   background: rgb(247.4950819672, 33.6049180328, 48.6147540984);
 }
 
-#lighten2 {
+.lighten2 {
   background: rgb(240.2557377049, 8.1442622951, 24.4327868852);
 }
 
-#lighten1 {
+.lighten1 {
   background: rgb(208.6278688525, 7.0721311475, 21.2163934426);
 }
 
-#darken1 {
+.darken1 {
   background: rgb(159.3, 5.4, 16.2);
 }
 
-#darken2 {
+.darken2 {
   background: rgb(141.6, 4.8, 14.4);
 }
 
-#darken3 {
+.darken3 {
   background: rgb(123.9, 4.2, 12.6);
 }
 
-#darken4 {
+.darken4 {
   background: rgb(106.2, 3.6, 10.8);
 }
 
-#basecolor2 {
+.basecolor2 {
   background-color: #B1CC28;
 }
 
-#lighten8 {
+.lighten8 {
   background: rgb(211.1754098361, 228.8360655738, 121.5639344262);
 }
 
-#lighten7 {
+.lighten7 {
   background: rgb(203.8713114754, 224.4754098361, 99.3245901639);
 }
 
-#lighten6 {
+.lighten6 {
   background: rgb(196.5672131148, 220.1147540984, 77.0852459016);
 }
 
-#lighten5 {
+.lighten5 {
   background: rgb(189.2631147541, 215.7540983607, 54.8459016393);
 }
 
-#darken5 {
+.darken5 {
   background: rgb(159.3, 183.6, 36);
 }
 
-#darken6 {
+.darken6 {
   background: rgb(141.6, 163.2, 32);
 }
 
-#darken7 {
+.darken7 {
   background: rgb(123.9, 142.8, 28);
 }
 
-#darken8 {
+.darken8 {
   background: rgb(106.2, 122.4, 24);
 }
 
-#basecolor3 {
+.basecolor3 {
   background-color: #4570ba;
 }
 
-#lighten12 {
+.lighten12 {
   background: rgb(143.4, 169.2, 213.6);
 }
 
-#lighten11 {
+.lighten11 {
   background: rgb(124.8, 154.9, 206.7);
 }
 
-#lighten10 {
+.lighten10 {
   background: rgb(106.2, 140.6, 199.8);
 }
 
-#lighten9 {
+.lighten9 {
   background: rgb(87.6, 126.3, 192.9);
 }
 
-#darken9 {
+.darken9 {
   background: rgb(62.1, 100.8, 167.4);
 }
 
-#darken10 {
+.darken10 {
   background: rgb(55.2, 89.6, 148.8);
 }
 
-#darken11 {
+.darken11 {
   background: rgb(48.3, 78.4, 130.2);
 }
 
-#darken12 {
+.darken12 {
   background: rgb(41.4, 67.2, 111.6);
 }
 
@@ -351,6 +351,7 @@ nav {
 @media (max-width: 768px) {
   body {
     grid-template-areas: "nav nav nav nav nav" "color color color color color" "lorem lorem lorem lorem lorem" "card card card card card";
+    grid-template-rows: auto;
   }
   nav {
     position: static;
@@ -365,7 +366,6 @@ nav {
     border-bottom: 1px solid #B1CC28;
   }
   .gradient_container {
-    margin-top: 11rem;
     display: grid;
     grid-template-areas: "title title title" "colors1 colors2 colors3";
     height: fit-content;
