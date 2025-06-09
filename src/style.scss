@@ -12,7 +12,7 @@
 @use "sass:color";
 
 @use "./var_darkmode" as var;
-//@use "./var_lightmode" as var;
+// @use "./var_lightmode" as var;
 
 @mixin principal_font {
     font-family: "Sono", monospace;
@@ -49,11 +49,11 @@
         }
 }
 
-@mixin lighten-color($base_color, $amount) {
-    background: color.scale($base_color, $lightness: $amount );
+@mixin lighten-color($base-color, $amount) {
+    background: color.scale($base-color, $lightness: $amount );
 }
-@mixin darkenen-color($base_color, $amount) {
-    background: color.scale($base_color, $lightness: -$amount );
+@mixin darkenen-color($base-color, $amount) {
+    background: color.scale($base-color, $lightness: -$amount );
 }
 
 @mixin button_style{
@@ -164,7 +164,7 @@ nav {
     display: flex;
     flex-direction: column;
     background-color: var.$terciary-colorA;
-    height: 25rem;
+    height: auto;
     margin: 1rem;
     align-content: center;
 
@@ -187,111 +187,35 @@ nav {
     margin-inline: 0.2rem;
     min-width: 4rem;
 
-    span{
+    .color-box-text{
         @include secondary_font();
         font-size: 13px;
     }
 }
 
-.basecolor1{
- background-color: var.$base_color1;
-}
-.lighten4 {
-    @include lighten-color(var.$base_color1, 40% )
-}
-.lighten3 {
-    @include lighten-color(var.$base_color1, 30% )
-}
-.lighten2 {
-    @include lighten-color(var.$base_color1, 20% )
-}
-.lighten1 {
-    @include lighten-color(var.$base_color1, 10% )
-}
-
-.darken1 {
-    @include darkenen-color(var.$base_color1, 10%)
-}
-.darken2 {
-    @include darkenen-color(var.$base_color1, 20%)
-}
-.darken3 {
-    @include darkenen-color(var.$base_color1, 30%)
-}
-.darken4 {
-    @include darkenen-color(var.$base_color1, 40%)
-}
+$base-colors: (
+    "1": var.$base-color-1,
+    "2": var.$base-color-2,
+    "3": var.$base-color-3
+);
 
 
-.basecolor2{
- background-color: var.$base_color2;
-}
-.lighten8 {
-    @include lighten-color(var.$base_color2, 40% )
-}
-.lighten7 {
-    @include lighten-color(var.$base_color2, 30% )
-}
-.lighten6 {
-    @include lighten-color(var.$base_color2, 20% )
-}
-.lighten5 {
-    @include lighten-color(var.$base_color2, 10% )
-}
-
-.darken5 {
-    @include darkenen-color(var.$base_color2, 10%)
-}
-.darken6 {
-    @include darkenen-color(var.$base_color2, 20%)
-}
-.darken7 {
-    @include darkenen-color(var.$base_color2, 30%)
-}
-.darken8 {
-    @include darkenen-color(var.$base_color2, 40%)
-}
-
-
-.basecolor3{
- background-color: var.$base_color3;
-}
-.lighten12 {
-    @include lighten-color(var.$base_color3, 40% )
-}
-.lighten11 {
-    @include lighten-color(var.$base_color3, 30% )
-}
-.lighten10 {
-    @include lighten-color(var.$base_color3, 20% )
-}
-.lighten9 {
-    @include lighten-color(var.$base_color3, 10% )
-}
-
-.darken9 {
-    @include darkenen-color(var.$base_color3, 10%)
-}
-.darken10 {
-    @include darkenen-color(var.$base_color3, 20%)
-}
-.darken11 {
-    @include darkenen-color(var.$base_color3, 30%)
-}
-.darken12 {
-    @include darkenen-color(var.$base_color3, 40%)
-}
-
-.gradient1 {
-    @include gradient1-style(); 
-}
-
-.gradient2 {
-    @include gradient1-style();
-}
-
-.gradient3{
-    @include gradient1-style();
+@each $num, $color in $base-colors {
+    .gradient-#{$num} {
+        @include gradient1-style();
+        
+        .base-color-#{$num} {
+            background-color: $color;
+        }
+    @for $i from 1 through 4 {
+      .lighten-#{$i} {
+        @include lighten-color($color, $i * 10%);
+      }
+      .darken-#{$i} {
+        @include darkenen-color($color, $i * 10%);
+      }
+    }
+  }
 }
 
 .lorem{
@@ -410,8 +334,10 @@ nav {
         display: grid;
         grid-template-areas: "title title title"
                             "colors1 colors2 colors3";
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto auto;                     
         height: fit-content;
-        justify-content: space-around;
+        justify-content: stretch;
 
         h1{
             grid-area: title;

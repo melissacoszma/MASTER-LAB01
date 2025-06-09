@@ -91,7 +91,7 @@ nav {
   display: flex;
   flex-direction: column;
   background-color: #106E93;
-  height: 25rem;
+  height: auto;
   margin: 1rem;
   align-content: center;
 }
@@ -111,7 +111,7 @@ nav {
   margin-inline: 0.2rem;
   min-width: 4rem;
 }
-.gradients span {
+.gradients .color-box-text {
   font-family: "Epilogue", sans-serif;
   font-size: 14px;
   font-weight: 400;
@@ -120,133 +120,106 @@ nav {
   font-size: 13px;
 }
 
-.basecolor1 {
+.gradient-1 {
+  display: flex;
+  flex-direction: row;
+  margin: 1rem;
+  justify-content: space-around;
+}
+.gradient-1 .base-color-1 {
   background-color: #B10612;
 }
-
-.lighten4 {
-  background: rgb(248.5672131148, 65.2327868852, 78.0983606557);
-}
-
-.lighten3 {
-  background: rgb(247.4950819672, 33.6049180328, 48.6147540984);
-}
-
-.lighten2 {
-  background: rgb(240.2557377049, 8.1442622951, 24.4327868852);
-}
-
-.lighten1 {
+.gradient-1 .lighten-1 {
   background: rgb(208.6278688525, 7.0721311475, 21.2163934426);
 }
-
-.darken1 {
+.gradient-1 .darken-1 {
   background: rgb(159.3, 5.4, 16.2);
 }
-
-.darken2 {
+.gradient-1 .lighten-2 {
+  background: rgb(240.2557377049, 8.1442622951, 24.4327868852);
+}
+.gradient-1 .darken-2 {
   background: rgb(141.6, 4.8, 14.4);
 }
-
-.darken3 {
+.gradient-1 .lighten-3 {
+  background: rgb(247.4950819672, 33.6049180328, 48.6147540984);
+}
+.gradient-1 .darken-3 {
   background: rgb(123.9, 4.2, 12.6);
 }
-
-.darken4 {
+.gradient-1 .lighten-4 {
+  background: rgb(248.5672131148, 65.2327868852, 78.0983606557);
+}
+.gradient-1 .darken-4 {
   background: rgb(106.2, 3.6, 10.8);
 }
 
-.basecolor2 {
+.gradient-2 {
+  display: flex;
+  flex-direction: row;
+  margin: 1rem;
+  justify-content: space-around;
+}
+.gradient-2 .base-color-2 {
   background-color: #B1CC28;
 }
-
-.lighten8 {
-  background: rgb(211.1754098361, 228.8360655738, 121.5639344262);
-}
-
-.lighten7 {
-  background: rgb(203.8713114754, 224.4754098361, 99.3245901639);
-}
-
-.lighten6 {
-  background: rgb(196.5672131148, 220.1147540984, 77.0852459016);
-}
-
-.lighten5 {
+.gradient-2 .lighten-1 {
   background: rgb(189.2631147541, 215.7540983607, 54.8459016393);
 }
-
-.darken5 {
+.gradient-2 .darken-1 {
   background: rgb(159.3, 183.6, 36);
 }
-
-.darken6 {
+.gradient-2 .lighten-2 {
+  background: rgb(196.5672131148, 220.1147540984, 77.0852459016);
+}
+.gradient-2 .darken-2 {
   background: rgb(141.6, 163.2, 32);
 }
-
-.darken7 {
+.gradient-2 .lighten-3 {
+  background: rgb(203.8713114754, 224.4754098361, 99.3245901639);
+}
+.gradient-2 .darken-3 {
   background: rgb(123.9, 142.8, 28);
 }
-
-.darken8 {
+.gradient-2 .lighten-4 {
+  background: rgb(211.1754098361, 228.8360655738, 121.5639344262);
+}
+.gradient-2 .darken-4 {
   background: rgb(106.2, 122.4, 24);
 }
 
-.basecolor3 {
+.gradient-3 {
+  display: flex;
+  flex-direction: row;
+  margin: 1rem;
+  justify-content: space-around;
+}
+.gradient-3 .base-color-3 {
   background-color: #4570ba;
 }
-
-.lighten12 {
-  background: rgb(143.4, 169.2, 213.6);
-}
-
-.lighten11 {
-  background: rgb(124.8, 154.9, 206.7);
-}
-
-.lighten10 {
-  background: rgb(106.2, 140.6, 199.8);
-}
-
-.lighten9 {
+.gradient-3 .lighten-1 {
   background: rgb(87.6, 126.3, 192.9);
 }
-
-.darken9 {
+.gradient-3 .darken-1 {
   background: rgb(62.1, 100.8, 167.4);
 }
-
-.darken10 {
+.gradient-3 .lighten-2 {
+  background: rgb(106.2, 140.6, 199.8);
+}
+.gradient-3 .darken-2 {
   background: rgb(55.2, 89.6, 148.8);
 }
-
-.darken11 {
+.gradient-3 .lighten-3 {
+  background: rgb(124.8, 154.9, 206.7);
+}
+.gradient-3 .darken-3 {
   background: rgb(48.3, 78.4, 130.2);
 }
-
-.darken12 {
+.gradient-3 .lighten-4 {
+  background: rgb(143.4, 169.2, 213.6);
+}
+.gradient-3 .darken-4 {
   background: rgb(41.4, 67.2, 111.6);
-}
-
-.gradient1 {
-  display: flex;
-  flex-direction: row;
-  margin: 1rem;
-  justify-content: space-around;
-}
-
-.gradient2 {
-  display: flex;
-  flex-direction: row;
-  margin: 1rem;
-  justify-content: space-around;
-}
-
-.gradient3 {
-  display: flex;
-  flex-direction: row;
-  margin: 1rem;
-  justify-content: space-around;
 }
 
 .lorem {
@@ -368,8 +341,10 @@ nav {
   .gradient_container {
     display: grid;
     grid-template-areas: "title title title" "colors1 colors2 colors3";
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
     height: fit-content;
-    justify-content: space-around;
+    justify-content: stretch;
   }
   .gradient_container h1 {
     grid-area: title;
