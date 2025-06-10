@@ -7,12 +7,11 @@
 // =============================================================================
 
    
-// 2. Mixins
-// ----------------------------------------------
 @use "sass:color";
 
 @use "./var_darkmode" as var;
 // @use "./var_lightmode" as var;
+
 
 @mixin principal_font {
     font-family: "Sono", monospace;
@@ -67,6 +66,12 @@
     @include interactive-style();
 }
 
+@mixin gradient-nr-vertical-style{
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+}
+
 
 // 3. Estilos principales
 // ----------------------------------------------
@@ -75,8 +80,8 @@ body {
     background-color: var.$secondary-colorA;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 2rem auto;
-    gap: 0,5rem;
+    grid-template-rows: auto 1fr;
+    gap: 0.5rem;
     grid-template-areas: "nav nav nav nav nav" 
                          "color color color card card"
                          "lorem lorem lorem card card";
@@ -88,7 +93,6 @@ body {
 nav {
     grid-area: nav;
     background-color: var.$terciary-colorA;
-    //height: 2rem;
     position: sticky;
     top: 0;
     z-index: 99;
@@ -193,21 +197,14 @@ nav {
     }
 }
 
-$base-colors: (
-    "1": var.$base-color-1,
-    "2": var.$base-color-2,
-    "3": var.$base-color-3
-);
-
-
-@each $num, $color in $base-colors {
-    .gradient-#{$num} {
+@each $num, $color in var.$base-colors {  //recorre cada elemento d ela lista base-colors
+    .gradient-#{$num} {                   // crea / ¨nombra¨ las clases respectivamente
         @include gradient1-style();
         
         .base-color-#{$num} {
             background-color: $color;
         }
-    @for $i from 1 through 4 {
+    @for $i from 1 through 4 {           //aplica las alteraciones de gradientes en casa clase-i que se genera en relación porcentual a la numeración de la clase > i=1 10%, i=2 20% etc
       .lighten-#{$i} {
         @include lighten-color($color, $i * 10%);
       }
@@ -344,19 +341,17 @@ $base-colors: (
         }
     }
 
-    .gradient1 {
-        display: flex;
-        flex-direction: column;
+    .gradient-1 {
+        @include gradient-nr-vertical-style();
         grid-area: colors1;
+        
     }
-     .gradient2 {
-        display: flex;
-        flex-direction: column;
+     .gradient-2 {
+        @include gradient-nr-vertical-style();
         grid-area: colors2;
     }
-     .gradient3 {
-        display: flex;
-        flex-direction: column;
+     .gradient-3 {
+        @include gradient-nr-vertical-style();
         grid-area: colors3;
     }
 
